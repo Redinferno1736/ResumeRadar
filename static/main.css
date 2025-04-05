@@ -95,10 +95,14 @@ button {
     font-size: 0.3em;
 }
 
+.btn button{
+    cursor: pointer;
+}
+
 .content {
     display: flex;
     /* flex-wrap: wrap; */
-    overflow: hidden;
+    /* overflow: hidden; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -122,20 +126,25 @@ button {
         font-size: 10px;
     }
 
-    /* .h1{
-        font-size: 20px;
+    .h1{
+        font-size: 1em;
     }
 
     .h2{
-        font-size: 45px;
-    } */
+        font-size: 2em;
+        
+    }
     .home img {
         background-position: left bottom;
     }
 
     .content{
-        height: 100px;
-        width: 100px; 
+        height: 113px;
+        width: 350px;
+        align-self: center;
+        left: 9%;
+        top: 40%;
     }
 
 }
+

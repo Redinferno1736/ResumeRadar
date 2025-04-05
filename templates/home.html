@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/static/main.css">
 </head>
 <body>
     <nav class="nav flex">
         <div class="logo flex">
-            <img src="assets/logo.svg" alt="" srcset="">
+            <img src="/static/assets/logo.svg" alt="" srcset="">
             <p>ResumeRadar</p>
         </div>
         <div class="btn flex">
-            <button>RECRUITER</button>
-            <button>APPLICANT</button>
+            <button onclick="window.location.href='/logrec'">RECRUITER</button>
+            <button onclick="window.location.href='/login'">APPLICANT</button>
         </div>
     </nav>
     <div class="home">
-        <img src="assets/background.jpg" alt="" srcset="">
+        <img src="/static/assets/background.jpg" alt="" srcset="">
         <div class="content">
             <div class="h2">
 
@@ -30,5 +30,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>

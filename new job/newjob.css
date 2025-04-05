@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Patrick+Hand+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+
+}
+
+
+
+nav {
+    /* position: absolute; */
+    background-color: #273FA1;
+    width: 99.5vw;
+    height: 10vh;
+    justify-content: space-between;
+    font-family: "Odor Mean Chey", serif;
+}
+
+.logo {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 4px;
+}
+
+.logo p {
+    color: white;
+    font-size: 36px;
+}
+
+.logo img {
+    height: 57px;
+    width: 49px;
+}
+
+.line{
+    border: 3px solid #FFC10D;
+    width: 99.5vw;
+}
+
+.cont{
+    height: 80vh;
+}
+
+.footer{
+    height: 6vh;
+    background-color: #273FA1;
+    width: 99.5vw;
+}
+
+
+.title {
+    width: fit-content;
+    font-family: "Odor Mean Chey", serif;
+    padding: 10px 30px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #194F82;
+    margin: 20px auto;
+    font-size: 70px;
+
+}
+
+.entry{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.one {
+    margin: auto;
+}
+
+.one input{
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid rgba(255, 193, 13, 0.28);
+    background-color: rgba(255, 193, 13, 0.28);
+    border-radius: 20px;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+    height: 26px;
+    width: 527px;
+}
+
+.name{
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    text-align: left;
+    display: flex;
+    font-family: "GFS Neohellenic", sans-serif;
+}
+
+.iph1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    position: absolute;
+    top: 77%;
+    left: 45%;
+    display: flex;
+    gap: 10px;
+}
+
+.btn1 , .btn2{
+    padding: 5px 20px;
+    background-color: #FFC10D;
+    color: #194F82;
+    border-radius: 20px;
+    font-size: 22px;
+    font-family: "GFS Neohellenic", sans-serif;
+    font-weight: 600;
+    border: #FFC10D;
+}
+
+@media only screen and (max-width: 600px) {
+    nav, .line, .footer {
+        width: 100%;
+    }
+
+    .logo p {
+        font-size: 24px;
+    }
+
+    .logo img {
+        height: 40px;
+        width: 35px;
+    }
+
+    .title {
+        font-size: 36px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .entry {
+        grid-template-columns: 1fr; /* Stack all form inputs vertically */
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .one input {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .btn {
+        position: static; /* Remove fixed position */
+        margin: 30px auto;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn1, .btn2 {
+        font-size: 18px;
+        padding: 10px 18px;
+    }
+
+    .cont {
+        height: auto; /* Let it grow naturally */
+        padding-bottom: 40px;
+    }
+
+    .footer {
+        height: 60px;
+        margin-top: 20px;
+    }
+}
