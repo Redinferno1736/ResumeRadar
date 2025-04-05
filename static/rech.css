@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    padding:0;
+    margin:0;
+}
+
+.nav{
+    height: 5vh;
+    background-color: #273FA1;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+}
+.nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: "Odor Mean Chey", serif;
+}
+
+.nav > a{
+    color:#FFC10D;
+    font-size:25px;
+}
+
+.line{
+    height: 1vh;
+    background-color: #FFC10D;
+}
+
+.space{
+    height: 10vh;
+}
+
+.add {
+    background-color: #FFC10D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    font-size: 35px;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-weight: normal;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+
+.container{
+    height:70vh;
+}
+
+.flex{
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+.color{
+    background-color:  #273FA1;
+    height:10vh;
+}
+
+.hack {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hack h2 {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#jobs-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.hack-card {
+    width: 200px;
+    height: 120px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    background-color: white;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.hack-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+}
+
+.job-link {
+    text-decoration: none;
+    color: black;
+}
+
+.yellow-line {
+    width: 80%;
+    height: 4px;
+    background-color: #FFC10D;
+    margin: 10px auto 30px auto;
+    border-radius: 2px;
+}
