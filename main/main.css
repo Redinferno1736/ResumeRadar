@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Patrick+Hand+SC&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+
+}
+
+nav {
+    /* position: absolute; */
+    background-color: #273FA1;
+    width: 99.5vw;
+    height: 10vh;
+    justify-content: space-between;
+    font-family: "Odor Mean Chey", serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.home {
+    height: 89vh;
+    width: 99.5vw;
+    /* position: absolute; */
+}
+
+.home img {
+    height: 89vh;
+    width: 99.5vw;
+    /* object-fit: cover; */
+    background-size: cover;
+    position: absolute;
+    background-position: center ;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo p {
+    color: white;
+    font-size: 36px;
+}
+
+.logo img {
+    height: 57px;
+    width: 49px;
+}
+
+.btn {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+
+}
+
+button {
+    padding: 10px;
+    border-radius: 30px;
+    border-style: none;
+    background-color: #FFC10D;
+    font-family: "Odor Mean Chey", serif;
+}
+
+.h2 {
+    /* position: absolute ;
+    z-index: 1;
+    top: 42%;
+    right: 19%; */
+    font-size: 86px;
+    font-family: "Odor Mean Chey", serif;
+    text-decoration: underline;
+    font-size: 1.3em;
+    /* flex-wrap: wrap; */
+}
+
+.h1 {
+    /* position: absolute ;
+    z-index: 1;
+    top: 55%;
+    right: 19%; */
+    /* flex-wrap: wrap; */
+    font-family: "Patrick Hand SC", cursive;
+    font-size: 0.3em;
+}
+
+.content {
+    display: flex;
+    /* flex-wrap: wrap; */
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    width: 35vw;
+    /* border: 2px solid red; */
+    z-index: 100;
+    font-size: 4vw;
+    position: absolute;
+    top: 28%;
+    left: 49%;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo p {
+        color: white;
+        font-size: 25px;
+    }
+
+    .btn button {
+        font-size: 10px;
+    }
+
+    /* .h1{
+        font-size: 20px;
+    }
+
+    .h2{
+        font-size: 45px;
+    } */
+    .home img {
+        background-position: left bottom;
+    }
+
+    .content{
+        height: 100px;
+        width: 100px; 
+    }
+
+}
