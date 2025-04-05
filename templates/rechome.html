@@ -21,18 +21,18 @@
     <div class="space"></div>
     <div class="container">
         <div class="flex">
-        <button class="add" >
-            <img src="/static/assets/Add_Plus_Circle.svg" alt="">Add a new job</button>
+        <button class="add" onclick="window.location.href='/add/job'">
+            <img src="/static/assets/Add_Plus_Circle.svg" alt="" >Add a new job</button>
         </div>
         <div class="hack">
             <h2>Your previous job listings</h2>
             <div class="yellow-line"></div>
             <div id="jobs-list">
                 {% for job in jobs %}
-                <a href="/jobs/{{ job.id }}" class="job-link">
+                <a href="/rec/{{ job.id }}" class="job-link">
                     <div class="jobs-card">
                         <h3>{{ job.compname }}</h3>
-                        <p>Date: {{ job.title }}</p>
+                        <p>Role: {{ job.role }}</p>
                     </div>
                 </a>
                 {% endfor %}

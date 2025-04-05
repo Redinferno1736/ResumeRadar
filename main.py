@@ -127,7 +127,7 @@ def rechome_page():
             {
                 'id': str(job['_id']),  
                 'compname': job['compname'],
-                'title': job['title']
+                'role': job['role']
             }
             for job in rec
         ]
@@ -145,15 +145,15 @@ def clienthome_page():
            {
                 'id': str(job['_id']),  
                 'compname': job['compname'],
-                'title': job['title']
+                'role': job['role']
             }
             for job in jobsopp
         ]
         return render_template("clienthome.html", user=user, jobs=jobs)
     return redirect('/login')
 
-@app.route("/add/hack", methods=["POST", "GET"])
-def addhack():
+@app.route("/add/job", methods=["POST", "GET"])
+def addjob():
     if request.method == 'POST':
         compname = request.form.get("compname")
         role = request.form.get("role")
@@ -162,7 +162,7 @@ def addhack():
         mode = request.form.get("mode")
         ldate = request.form.get("ldate")
         username = session['recruiter']['name']
-
+        print(compname,username,ldate)
         hic.insert_one({
             'username':username,
             'compname': compname, 
@@ -182,19 +182,19 @@ def recjob_details(job_id):
     if not job_det:
         flash("Job not found!")
         return redirect('/rechome')
-    add = client[slugify(job_det['title'])]
-    helper = add['jobinfo']
+    add = client[slugify(job_det['compname'])]
+    helper = add[slugify(job_det['role'])]
     job_det['_id'] = str(job_det['_id'])
     return render_template("recjobdetails.html", job_det=job_det)
 
-@app.route("/<job_id>", methods=["POST", "GET"])
+@app.route("/user/<job_id>", methods=["POST", "GET"])
 def job_details(job_id):
     job_det = hic.find_one({'_id': ObjectId(job_id)})
     if not job_det:
         flash("Job not found!")
         return redirect('/clienthome')
-    add = client[slugify(job_det['title'])]
-    helper = add['jobinfo']
+    add = client[slugify(job_det['compname'])]
+    helper = add[slugify(job_det['role'])]
     job_det['_id'] = str(job_det['_id'])
     return render_template("jobdetails.html", job_det=job_det)
 

@@ -25,10 +25,10 @@
             <div class="yellow-line"></div>
             <div id="jobs-list">
                 {% for job in jobs %}
-                <a href="/{{ job.id }}" class="job-link">
+                <a href="/user/{{ job.id }}" class="job-link">
                     <div class="jobs-card">
                         <h3>{{ job.compname }}</h3>
-                        <p>Date: {{ job.title }}</p>
+                        <p>Role: {{ job.role }}</p>
                     </div>
                 </a>
                 {% endfor %}
