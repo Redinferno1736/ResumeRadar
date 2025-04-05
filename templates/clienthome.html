@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/rech.css">
+    <title>Home-Recruiter</title>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img width="30" height="40" src="/static/assets/logo.png" alt="logo" class="logo">
+            <a href="/">ResumeRadar</a>
+        </div>
+        <a href="/logout">Log out</a>
+    </div>
+    <div class="line"></div>
+    <div class="space"></div>
+    <div class="container">
+        <!-- Removed .flex and .add button -->
+        <div class="hack">
+            <h2>Your previous job listings</h2>
+            <div class="yellow-line"></div>
+            <div id="jobs-list">
+                {% for job in jobs %}
+                <a href="/host/{{ job.id }}" class="job-link">
+                    <div class="hack-card">
+                        <h3>{{ job.title }}</h3>
+                        <p>Date: {{ job.date }}</p>
+                        <p>Duration: {{ job.duration }} hours</p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="color"></div>
+</body>
+
+</html>
