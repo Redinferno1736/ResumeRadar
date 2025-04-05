@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Odor+Mean+Chey&family=Patrick+Hand+SC&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: "Odor Mean Chey", serif;
+}
+
+.flex {
+  display: flex;
+}
+
+nav {
+  background-color: #273FA1;
+  width: 100%;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo {
+  align-items: center;
+  gap: 10px;
+}
+
+.logo p {
+  color: white;
+  font-size: 2rem;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.btn {
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #FFC10D;
+  font-family: "Odor Mean Chey", serif;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.home {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-image {
+  background-image: url('/static/assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: black;
+}
+
+.h2 {
+  font-size: 4vw;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.h1 {
+  font-family: "Patrick Hand SC", cursive;
+  font-size: 2vw;
+}
+
+@media (max-width: 768px) {
+  .logo p {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
+
+  .h2 {
+    font-size: 6vw;
+  }
+
+  .h1 {
+    font-size: 4vw;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo p {
+    font-size: 1.2rem;
+  }
+
+  .btn button {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+
+  .h2 {
+    font-size: 7vw;
+  }
+
+  .h1 {
+    font-size: 5vw;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
