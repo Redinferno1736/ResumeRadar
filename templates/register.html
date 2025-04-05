@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <div class="nav">
+        <img width="30" height="40" src="/static/assets/Logo.png" alt="Jarvis Logo" class="logo">
+        <a href="/">ResumeRadar</a>
+    </div>
+    <div class="line"></div>
+    <div class="space"></div>
+    <div class="whatever">
+        <div class="login">
+            <div class="header">
+                <h1>Register</h1>
+            </div>
+
+
+            <form action="/login" method="post">
+                <input type="text" placeholder="Username/Mobile-Number" required name="username">
+                <input type="password" placeholder="Password" required name="password">
+                <input type="password" placeholder="Confirm Password" required name="confirm">
+                <button type="submit" class="login-btn">Submit</button>
+
+                <div class="links">
+                    <span>Have an Account?</span>
+                    <a href="/login" class="signup">Login</a>
+                </div>
+
+                <div class="divider">OR</div>
+
+                <button class="google" onclick="window.location.href='/client/auth/google'">
+                    <img width="10px" src="/static/assets/ggl.png" alt="Google"> Login with Google
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="space"></div>
+    <div class="line"></div>
+    <div class="color"></div>
+</body>
+
+</html>
