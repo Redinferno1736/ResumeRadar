@@ -4,50 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEW JOBS</title>
-    <link rel="stylesheet" href="newjob.css">
+    <link rel="stylesheet" href="/static/jobdetails.css">
 </head>
 <body>
     <nav class="nav flex">
         <div class="logo flex">
-            <img src="assets/logo.svg" alt="" srcset="">
+            <img src="/static/assets/logo.svg" alt="" srcset="">
             <p>ResumeRadar</p>
         </div>
     </nav>
     <div class="line"></div>
     <div class="cont">
-        <div class="title">New Job</div>
+        <div class="title">Job Details</div>
         <div class="entry">
             <div class="one">
             <div class="name">Company Name:</div>
-            <input class="iph1" type="text" name="" id="">
+            <div class="bos">{{job_det.compname}}</div>
             </div>
             <div class="one">
-            <div class="name"> Job role:</div>
-            <input class="iph1" type="text" name="" id="">
+            <div class="name">Job role:</div>
+            <div class="bos">{{job_det.role}}</div>
             </div>
             <div class="one">
             <div class="name">Description:</div>
-            <input class="iph1" type="text" name="" id="">
+            <div class="bos">{{job_det.description}}</div>
             </div>
             <div class="one">
             <div class="name">Skills:</div>
-            <input class="iph1" type="text" name="" id="">
+            <div class="bos">{{job_det.skills}}</div>
             </div>
             <div class="one">
             <div class="name">Mode:</div>
-            <input class="iph1" type="text" name="" id="">
+            <div class="bos">{{job_det.mode}}</div>
             </div>
             <div class="one">
             <div class="name">Last date to apply:</div>
-            <input class="iph1" type="text" name="" id="">
+            <div class="bos">{{job_det.ldate}}</div>
             </div>
+            
             
             
         </div>
     </div>
     <div class="btn">
-        <button type="button" class="btn1" >Cancel</button>
-        <button type="submit" class="btn2" >Save</button>
+        <button type="button" class="btn1" onclick="window.location.href='/rechome'">Cancel</button>
+        <button type="submit" class="btn2" >View Resumes</button>
     </div>
     <div class="line"></div>
     <div class="footer"></div>

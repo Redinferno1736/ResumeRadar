@@ -20,17 +20,15 @@
     <div class="line"></div>
     <div class="space"></div>
     <div class="container">
-        <!-- Removed .flex and .add button -->
         <div class="hack">
-            <h2>Your previous job listings</h2>
+            <h2>Available job listings</h2>
             <div class="yellow-line"></div>
             <div id="jobs-list">
                 {% for job in jobs %}
-                <a href="/host/{{ job.id }}" class="job-link">
-                    <div class="hack-card">
-                        <h3>{{ job.title }}</h3>
-                        <p>Date: {{ job.date }}</p>
-                        <p>Duration: {{ job.duration }} hours</p>
+                <a href="/{{ job.id }}" class="job-link">
+                    <div class="jobs-card">
+                        <h3>{{ job.compname }}</h3>
+                        <p>Date: {{ job.title }}</p>
                     </div>
                 </a>
                 {% endfor %}

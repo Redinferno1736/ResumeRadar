@@ -4,51 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEW JOBS</title>
-    <link rel="stylesheet" href="jobdetails.css">
+    <link rel="stylesheet" href="/static/newjob.css">
 </head>
 <body>
     <nav class="nav flex">
         <div class="logo flex">
-            <img src="assets/logo.svg" alt="" srcset="">
+            <img src="/static/assets/logo.svg" alt="" srcset="">
             <p>ResumeRadar</p>
         </div>
     </nav>
     <div class="line"></div>
     <div class="cont">
-        <div class="title">Job Details</div>
+        <div class="title">New Job</div>
         <div class="entry">
             <div class="one">
             <div class="name">Company Name:</div>
-            <div class="bos"></div>
+            <input class="iph1" type="text" name="compname">
             </div>
             <div class="one">
-            <div class="name">Job role:</div>
-            <div class="bos"></div>
+            <div class="name"> Job role:</div>
+            <input class="iph1" type="text" name="role">
             </div>
             <div class="one">
             <div class="name">Description:</div>
-            <div class="bos"></div>
+            <input class="iph1" type="text" name="description">
             </div>
             <div class="one">
             <div class="name">Skills:</div>
-            <div class="bos"></div>
+            <input class="iph1" type="text" name="skills">
             </div>
             <div class="one">
             <div class="name">Mode:</div>
-            <div class="bos"></div>
+            <input class="iph1" type="text" name="mode">
             </div>
             <div class="one">
             <div class="name">Last date to apply:</div>
-            <div class="bos"></div>
+            <input class="iph1" type="date" name="ldate">
             </div>
-            
             
             
         </div>
     </div>
     <div class="btn">
-        <button type="button" class="btn1" >Cancel</button>
-        <button type="submit" class="btn2" >Upload Resume</button>
+        <button type="button" class="btn1" onclick="window.location.href='/rechome'">Cancel</button>
+        <button type="submit" class="btn2" onclick="window.location.href='/rechome'">Save</button>
     </div>
     <div class="line"></div>
     <div class="footer"></div>

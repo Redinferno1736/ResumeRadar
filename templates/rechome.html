@@ -21,7 +21,7 @@
     <div class="space"></div>
     <div class="container">
         <div class="flex">
-        <button class="add">
+        <button class="add" >
             <img src="/static/assets/Add_Plus_Circle.svg" alt="">Add a new job</button>
         </div>
         <div class="hack">
@@ -29,11 +29,10 @@
             <div class="yellow-line"></div>
             <div id="jobs-list">
                 {% for job in jobs %}
-                <a href="/host/{{ job.id }}" class="job-link">
-                    <div class="hack-card">
-                        <h3>{{ job.title }}</h3>
-                        <p>Date: {{ job.date }}</p>
-                        <p>Duration: {{ job.duration }} hours</p>
+                <a href="/jobs/{{ job.id }}" class="job-link">
+                    <div class="jobs-card">
+                        <h3>{{ job.compname }}</h3>
+                        <p>Date: {{ job.title }}</p>
                     </div>
                 </a>
                 {% endfor %}
