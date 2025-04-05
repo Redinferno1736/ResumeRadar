@@ -111,9 +111,9 @@ def logrec_page():
             return redirect('/rechome')
         else:
             flash("Invalid username or password!")
-            return render_template("reclogin.html")
+            return render_template("logrec.html")
     else:
-        return render_template("reclogin.html") 
+        return render_template("logrec.html") 
 
 if __name__ == "__main__":
     app.run(debug=False)
