@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job List</title>
+    <link rel="stylesheet" href="/static/joblist.css">
+</head>
+
+<body>
+    <nav class="nav flex">
+        <div class="logo flex">
+            <img src="/static/assets/logo.svg" alt="" srcset="">
+            <p>ResumeRadar</p>
+        </div>
+    </nav>
+    <div class="job">
+        <h2>Jobs List</h2>
+        <div id="jobs-list">
+            {% for comp, files in comp_files.items() %}
+            <div class="hack-card">
+                <h3>{{ comp }}</h3>
+                <div class="files-list">
+                    {% for file in files %}
+                        <a href="{{ url_for('serve_file', job_id=job_det._id,file_id=file.id) }}" target="_blank">
+                            {{ file.filename }}
+                        </a>
+                    {% endfor %}
+                    <a href="{{ url_for('segregate', job_id=job_det._id) }}">Segregate</a>
+                    
+                </div>
+            </div>
+            <div class="divider"></div>
+        {% endfor %}
+        </div>
+    </div>
+</body>
+
+</html>

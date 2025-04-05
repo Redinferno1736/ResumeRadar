@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segregate</title>
+    <link rel="stylesheet" href="/static/segregate.css">
+</head>
+<body>
+    <nav class="nav flex">
+        <div class="logo flex">
+            <img src="/static/assets/logo.svg" alt="" srcset="">
+            <p>ResumeRadar</p>
+        </div>
+    </nav>
+<div id="results">
+    <h2>Categorized Applications</h2>
+    
+    <div class="category" id="good-fit">
+        <h3>Good Fit ({{ categorized['Good Fit']|length }})</h3>
+        {% for file in categorized['Good Fit'] %}
+        <div class="file-card">
+            <i class="fas fa-file-pdf"></i>
+            <span>{{ file }}</span>
+        </div>
+        {% else %}
+        <p class="empty-state">No candidates in this category</p>
+        {% endfor %}
+    </div>
+
+    <div class="category" id="maybe-fit">
+        <h3>Maybe Fit ({{ categorized['Maybe Fit']|length }})</h3>
+        {% for file in categorized['Maybe Fit'] %}
+        <div class="file-card">
+            <i class="fas fa-file-pdf"></i>
+            <span>{{ file }}</span>
+        </div>
+        {% else %}
+        <p class="empty-state">No candidates in this category</p>
+        {% endfor %}
+    </div>
+
+    <div class="category" id="not-fit">
+        <h3>Not a Fit ({{ categorized['Not a Fit']|length }})</h3>
+        {% for file in categorized['Not a Fit'] %}
+        <div class="file-card">
+            <i class="fas fa-file-pdf"></i>
+            <span>{{ file }}</span>
+        </div>
+        {% else %}
+        <p class="empty-state">No candidates in this category</p>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+</html>

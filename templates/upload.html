@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Resume</title>
+    <link rel="stylesheet" href="/static/upload.css">
+</head>
+
+<body>
+    <form action="/upload/{{job_det._id}}" method="post" enctype="multipart/form-data">
+        <nav class="nav flex">
+            <div class="logo flex">
+                <img src="/static/assets/logo.svg" alt="" srcset="">
+                <p>ResumeRadar</p>
+            </div>
+        </nav>
+        <h2 class="heading">Upload Your Resume</h2>
+        <input class="files" type="file" name="file">
+        <input class="files1" type="submit" value="Upload">
+    </form>
+</body>
+
+</html>
