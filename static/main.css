@@ -95,6 +95,10 @@ button {
     font-size: 0.3em;
 }
 
+.btn button{
+    cursor: pointer;
+}
+
 .content {
     display: flex;
     /* flex-wrap: wrap; */
@@ -143,3 +147,4 @@ button {
     }
 
 }
+
