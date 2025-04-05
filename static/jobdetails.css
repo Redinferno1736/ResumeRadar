@@ -47,16 +47,9 @@ nav {
 }
 
 .cont{
-    height: 80vh;
+    min-height: 67vh;
 }
 
-.footer{
-    position: absolute;
-    bottom: 0;
-    height: 6.5vh;
-    background-color: #273FA1;
-    width: 99.5vw;
-}
 
 
 .title {
@@ -73,8 +66,6 @@ nav {
 
 .entry{
     display: grid;
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; */
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
 }
@@ -111,29 +102,45 @@ nav {
     justify-content: center;
 }
 
-.btn{
-    position: absolute;
-    top: 77%;
-    left: 45%;
+.btn {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px auto;
+    padding: 10px;
 }
 
-.btn1 , .btn2{
-    padding: 5px 20px;
+.btn1, .btn2 {
+    padding: 10px 25px;
     background-color: #FFC10D;
     color: #194F82;
     border-radius: 20px;
-    font-size: 22px;
+    font-size: 20px;
     font-family: "GFS Neohellenic", sans-serif;
     font-weight: 600;
-    border: #FFC10D;
+    border: none;
     cursor: pointer;
+    min-width: 140px;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
+
+.btn1:hover, .btn2:hover {
+    background-color: #e0a800;
+}
+
+.footer {
+    height: 6.5vh;
+    background-color: #273FA1;
+    width: 100%;
+}
+
+
 
 @media only screen and (max-width: 600px) {
     .entry {
-        grid-template-columns: 1fr; /* Stack all 6 fields vertically */
+        grid-template-columns: 1fr; 
         gap: 30px;
         padding: 0 20px;
     }
@@ -149,18 +156,17 @@ nav {
     }
 
     .btn {
-        position: static; /* Let it flow naturally */
-        margin: 30px auto;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .btn1, .btn2 {
+        width: 80%;
         font-size: 18px;
-        padding: 8px 16px;
+        padding: 10px;
     }
 
     .footer {
-        position: static;
         margin-top: 20px;
     }
 }
